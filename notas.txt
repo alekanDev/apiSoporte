@@ -1,0 +1,48 @@
+Plantilla para User
+****************************
+{
+"name": "alejandro",
+"lastname": "cano",
+"username": "alejandro.cano",
+"pass": "mekagroup",
+"email": "alejandro.cano@cubiqnet.com",
+"phone": 3504419777, 
+"area": "soporte",
+"rol": "superAdmin"
+}
+
+Plantilla para Company
+****************************
+{
+"name": "anndex international courier services, corp.",
+"id": 0001,
+"country": "usa",
+"state": "Florida"
+"city": "miami",
+"address": "7966 NW 14th St, Doral, FL 33126",
+"keywords": ["anndex","andex"]
+}
+
+Plantilla para Device
+****************************
+{
+"name": "anndex_ocr",
+"type": "ocr",
+"pid": "3589-071E-D3C6-EA16-362C-3859-F85D-8426",
+"city": "miami",
+"vpn": "10.8.0.93",
+"anydesk": "n/A", 
+"board": "nvidia jetson nano 4gb",
+"camera": "asus",
+"serialCamera": 1406200370, 
+"ocrCamera": "hikRobot",
+"externalCamera": "dhajua",
+"ipExternalCamera": "10.10.10.105",
+"versionCubiQ": "3.0.41-noSave",
+"versionCubiQ_one": "3.7.3 14-04-2022",
+"versionMiddelware": "3.2.5 Beta-5-A",
+"keywords": ["anndex","andex"]
+}
+
+evitar que docker se inicialice con sudo
+sudo usermod -aG docker $USER
