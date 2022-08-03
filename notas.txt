@@ -44,5 +44,14 @@ Plantilla para Device
 "keywords": ["anndex","andex"]
 }
 
+
+-------------------------------------------------------
+********** toBlog
+-------------------------------------------------------
 evitar que docker se inicialice con sudo
 sudo usermod -aG docker $USER
+
+crear portainer para gestion de docker
+docker run -itd -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /docker/portainer/data:/data portainer/portainer-ce
+
+key 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

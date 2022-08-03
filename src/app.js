@@ -25,10 +25,6 @@ app.listen(port, () => {
 
 app.use(morgan('dev'))
 
-// middleware
-// app.use(function (req,res, next) {
-//     res.header('Access-Control-Allow_Origins','*')
-// })
 app.use(express.json())
 app.use('/api', userRoutes)
 app.use('/api', deviceRoutes)
