@@ -3,7 +3,7 @@ version: '3'
 
 services:
   # Nombre del servicio (Nombre deseado)
-  api:
+  support_api:
     # Nombre para el contenedor
     container_name: api_sopCubiq
     # Indica que en caso de que haya un fallo en el contenedor se reinicie
@@ -23,7 +23,7 @@ services:
       - .:/usr/src/app
 
   # Nombre del servicio (Nombre deseado)
-  mongo:
+  support_mongo:
     # Nombre para el contenedor
     container_name: db_sopCubiq
     # Nombre de la imagen para crear el contenedor (dockerHub)

@@ -12,19 +12,19 @@ Plantilla para User
 }
 
 Plantilla para Company
-****************************
+******************************
 {
 "name": "anndex international courier services, corp.",
 "id": 0001,
 "country": "usa",
-"state": "Florida"
+"state": "Florida",
 "city": "miami",
 "address": "7966 NW 14th St, Doral, FL 33126",
 "keywords": ["anndex","andex"]
 }
 
 Plantilla para Device
-****************************
+*******************************
 {
 "name": "anndex_ocr",
 "type": "ocr",
@@ -43,7 +43,6 @@ Plantilla para Device
 "versionMiddelware": "3.2.5 Beta-5-A",
 "keywords": ["anndex","andex"]
 }
-
 
 -------------------------------------------------------
 ********** toBlog

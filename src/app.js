@@ -11,12 +11,14 @@ const cors = require('cors')
 // Modulo para crear variables de entorno y hacer un poco mas segura la app
 require('dotenv').config()
 
-const path = require('path')
+// const path = require('path')
 const app = express()
 const port = process.env.PORT || 5000
 const userRoutes = require('./routes/usersRoutes')
 const deviceRoutes = require('./routes/devicesRoutes')
 const companyRoutes = require('./routes/companiesRoutes')
+const reportRoutes = require('./routes/reportsRoutes')
+const mqtt = require('./routes/mqtt')
 
 // server
 app.listen(port, () => {
@@ -25,10 +27,18 @@ app.listen(port, () => {
 
 app.use(morgan('dev'))
 
+const whiteList = ['http://localhost:5000']
+
+app.use(cors({whiteList}))
+
 app.use(express.json())
 app.use('/api', userRoutes)
 app.use('/api', deviceRoutes)
 app.use('/api', companyRoutes)
+app.use('/pub', mqtt)
+
+
+app.use('/api', reportRoutes)
 
 //conexion a mongoDB
 mongoose
@@ -36,8 +46,3 @@ mongoose
 .then(() => {
     console.log('Conected to mongoDB')
 }).catch((err) => console.log(err))
-
-// routes
-// app.get('/', (req, res) =>{
-//     res.sendFile(path.join(__dirname, './index.html'))
-// })

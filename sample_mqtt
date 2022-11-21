@@ -1,0 +1,21 @@
+const mqtt  = require('mqtt')
+
+const client = mqtt.connect('mqtt://192.168.1.179')
+
+
+function eventSubscrib() {
+  client.subscribe('supportCubiQ/#', function(err){
+    if(!err) {
+      client.publish('supportCubiQ/nodeJS', 'Hello from code')
+    }
+  })
+}
+
+function eventPublic(topic, message) {
+  
+  console.log(`${topic} - ${message.toString()}`)
+  // client.end()
+}
+
+client.on('connect', eventSubscrib)
+client.on('message', eventPublic)
