@@ -13,12 +13,9 @@ services:
     # Puerto local : Puerto que expone la app
     ports:
       - "5000:5000"
-
-    # Enlace con el contenedor mongo
-    # links:
-    #   - mongo:latest
-
     # Almacenamiento local (para que no se pierda la información)
+    links:
+      - support_mongo
     volumes:
       - .:/usr/src/app
 
@@ -26,8 +23,7 @@ services:
   support_mongo:
     # Nombre para el contenedor
     container_name: supportCubiQ_db
-    # Indica que en caso de que haya un fallo en el contenedor se reinicie
-    restart: always
+
     # Nombre de la imagen para crear el contenedor (dockerHub)
     image: mongo
     # Puerto local : Puerto que expone la app
