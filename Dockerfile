@@ -1,6 +1,8 @@
 # Indica que se tomara una imagen llamada node (dockerHub)
 FROM node
 
+RUN npm install -g npm@9.1.2
+
 # RUN se utiliza para correr comandos linux, -p se utiliza para que creen los directorios en caso de que no existan
 RUN mkdir -p /usr/src/app
 

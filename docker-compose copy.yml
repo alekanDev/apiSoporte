@@ -13,6 +13,11 @@ services:
     # Puerto local : Puerto que expone la app
     ports:
       - "5000:5000"
+
+    # Enlace con el contenedor mongo
+    # links:
+    #   - mongo:latest
+
     # Almacenamiento local (para que no se pierda la información)
     volumes:
       - .:/usr/src/app
@@ -33,6 +38,3 @@ services:
     command: mongod --quiet --logpath /dev/null 
 
     # NOTA: Una vez realizado todos los pasos para la construcción se ejecuta docker-compose buil y para la ejecución debe de ingresar el comando docker-compose up
-  networks:
-      default:
-        name: api-network
