@@ -33,6 +33,6 @@ services:
     command: mongod --quiet --logpath /dev/null 
 
     # NOTA: Una vez realizado todos los pasos para la construcción se ejecuta docker-compose buil y para la ejecución debe de ingresar el comando docker-compose up
-  networks:
-      default:
-        name: api-network
+networks:
+  default:
+    name: api-network
