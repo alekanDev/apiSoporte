@@ -27,7 +27,7 @@ app.listen(port, () => {
 
 app.use(morgan('dev'))
 
-const whiteList = ['http://localhost:5000']
+const whiteList = ['http://localhost:5000','http://10.8.0.216:5000/']
 
 app.use(cors({whiteList}))
 
